@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import propTypes from 'prop-types'
 
 import './Task.scss'
@@ -6,11 +6,11 @@ import './Task.scss'
 const Task = ({ onDeleted, onToggleCompleted, itemProps, onEditItem, onEdit }) => {
   const { completed, label, date, time, id, editing } = itemProps
 
-  // const labelChange = React.useRef(null)
+  const labelChange = React.useRef(null)
 
-  // useEffect(() => {
-  //   labelChange.current.focus()
-  // }, [editing])
+  useEffect(() => {
+    labelChange.current.focus()
+  }, [editing])
 
   const makeTime = (time) => {
     let min = Math.floor(time / 60)
@@ -98,7 +98,7 @@ const Task = ({ onDeleted, onToggleCompleted, itemProps, onEditItem, onEdit }) =
           value={newLabel}
           onChange={onLabelChange}
           autoFocus
-          // ref={labelChange}
+          ref={labelChange}
         />
       </form>
     </li>
