@@ -61,7 +61,7 @@ const NewTaskForm = ({ onItemAdded }) => {
       />
       <input
         className="new-todo-form__timer"
-        type="number"
+        // type="number"
         // min="0"
         // max="59"
         placeholder="Min"
@@ -71,7 +71,7 @@ const NewTaskForm = ({ onItemAdded }) => {
       />
       <input
         className="new-todo-form__timer"
-        type="number"
+        // type="number"
         // min="0"
         // max="59"
         placeholder="Sec"
