@@ -1,3 +1,3 @@
 # react_todo
 
-react-todo-coral.vercel.app
+https://vercel.com/ark-rym/todo
