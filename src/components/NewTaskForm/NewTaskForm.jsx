@@ -9,18 +9,18 @@ const NewTaskForm = ({ onItemAdded }) => {
     sec: '',
   })
 
-  // function checkInput(text) {
-  //   let isValid = text.replace(/^\s+|\s+$/g, '')
-  //   return isValid
-  // }
+  function checkInput(text) {
+    let isValid = text.replace(/^\s+|\s+$/g, '')
+    return isValid
+  }
 
   const onLabelChange = (e) => {
-    // if (checkInput(e.target.value)) {
-    setState((state) => ({
-      ...state,
-      label: e.target.value,
-    }))
-    // }
+    if (checkInput(e.target.value)) {
+      setState((state) => ({
+        ...state,
+        label: e.target.value,
+      }))
+    }
   }
 
   const onMinChange = (e) => {
@@ -57,27 +57,27 @@ const NewTaskForm = ({ onItemAdded }) => {
         onChange={onLabelChange}
         value={label}
         autoFocus
-        // required
+        required
       />
       <input
         className="new-todo-form__timer"
-        // type="number"
-        // min="0"
-        // max="59"
+        type="number"
+        min="0"
+        max="59"
         placeholder="Min"
         onChange={onMinChange}
         value={min}
-        // required
+        required
       />
       <input
         className="new-todo-form__timer"
-        // type="number"
-        // min="0"
-        // max="59"
+        type="number"
+        min="0"
+        max="59"
         placeholder="Sec"
         onChange={onSecChange}
         value={sec}
-        // required
+        required
       />
       <input type="submit" className="hidden" />
     </form>
