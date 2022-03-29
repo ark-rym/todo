@@ -51,7 +51,11 @@ const NewTaskForm = ({ onItemAdded }) => {
   const { label, min, sec } = state
   return (
     <form className="new-todo-form" onSubmit={onSubmit}>
+      <label htmlFor={1} />
+      <label htmlFor={2} />
+      <label htmlFor={2} />
       <input
+        id={1}
         className="new-todo"
         placeholder="Task"
         onChange={onLabelChange}
@@ -60,6 +64,7 @@ const NewTaskForm = ({ onItemAdded }) => {
         required
       />
       <input
+        id={2}
         className="new-todo-form__timer"
         type="number"
         min="0"
@@ -70,6 +75,7 @@ const NewTaskForm = ({ onItemAdded }) => {
         required
       />
       <input
+        id={3}
         className="new-todo-form__timer"
         type="number"
         min="0"
